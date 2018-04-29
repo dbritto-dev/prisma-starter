@@ -29,10 +29,10 @@ npm install -g graphql-cli prisma
 
 ```sh
 # 1. Clone the project
-git clone https://github.com/danilobrinu/node-graphql-basic.git
+git clone https://github.com/danilobrinu/prisma-starter-kit.git
 
 # 2. Navigate to the new project
-cd node-graphql-basic
+cd prisma-starter-kit
 
 # 3. Start server (runs on http://localhost:4000) and open GraphQL Playground
 yarn dev
