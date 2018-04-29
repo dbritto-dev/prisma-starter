@@ -19,7 +19,7 @@ For a fully-fledged **GraphQL & Node.js tutorial**, visit [How to GraphQL](https
 
 ## Requirements
 
-You need to have the [GraphQL CLI](https://github.com/graphql-cli/graphql-cli) installed to bootstrap your GraphQL server using `graphql init`:
+You need to have the [GraphQL CLI](https://github.com/graphql-cli/graphql-cli) installed to bootstrap your GraphQL server using `graphql init` and [Prisma](https://github.com/graphcool/prisma) to deploy and update database using `prisma deploy`:
 
 ```sh
 npm install -g graphql-cli prisma
@@ -28,12 +28,18 @@ npm install -g graphql-cli prisma
 ## Getting started
 
 ```sh
-# 1. Navigate to the new project
-cd my-app
+# 1. Clone the project
+git clone https://github.com/danilobrinu/node-graphql-basic.git
 
-# 2. Start server (runs on http://localhost:4000) and open GraphQL Playground
+# 2. Navigate to the new project
+cd node-graphql-basic
+
+# 3. Start server (runs on http://localhost:4000) and open GraphQL Playground
 yarn dev
 ```
+
+> **Note**: We recommend not update graphql-yoga for now, have some [issues](https://github.com/graphcool/graphql-yoga/issues/297)
+ leave the stable version graphql-yoga@1.12.1 for now.
 
 ![](https://imgur.com/hElq68i.png)
 
@@ -42,9 +48,10 @@ yarn dev
 ### Commands
 
 * `yarn start` starts GraphQL server on `http://localhost:4000`
-* `yarn dev` starts GraphQL server on `http://localhost:4000` _and_ opens GraphQL Playground
+* `yarn debug` starts GraphQL server in debug mode on `http://localhost:4000`
 * `yarn playground` opens the GraphQL Playground for the `projects` from [`.graphqlconfig.yml`](./.graphqlconfig.yml)
-* `yarn prisma <subcommand>` gives access to local version of Prisma CLI (e.g. `yarn prisma deploy`)
+* `yarn dev` starts GraphQL server on `http://localhost:4000` _and_ opens GraphQL Playground
+* `prisma <subcommand>` gives access to local version of Prisma CLI (e.g. `prisma deploy`)
 
 > **Note**: We recommend that you're using `yarn dev` during development as it will give you access to the GraphQL API or your server (defined by the [application schema](./src/schema.graphql)) as well as to the Prisma API directly (defined by the [Prisma database schema](./generated/prisma.graphql)). If you're starting the server with `yarn start`, you'll only be able to access the API of the application schema.
 
