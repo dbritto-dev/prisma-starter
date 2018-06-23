@@ -35,7 +35,7 @@ git clone https://github.com/danilobrinu/prisma-starter-kit.git
 cd prisma-starter-kit
 
 # 3. Install npm packages
-yarn
+yarn install
 
 # 3. Start server (runs on http://localhost:4000) and open GraphQL Playground
 yarn dev
