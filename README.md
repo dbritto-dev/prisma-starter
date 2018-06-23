@@ -22,7 +22,7 @@ For a fully-fledged **GraphQL & Node.js tutorial**, visit [How to GraphQL](https
 You need to have the [GraphQL CLI](https://github.com/graphql-cli/graphql-cli) installed to bootstrap your GraphQL server using `graphql init` and [Prisma](https://github.com/graphcool/prisma) to deploy and update database using `prisma deploy`:
 
 ```sh
-npm install -g graphql-cli prisma
+npm install -g graphql-cli prisma yarn
 ```
 
 ## Getting started
@@ -34,9 +34,14 @@ git clone https://github.com/danilobrinu/prisma-starter-kit.git
 # 2. Navigate to the new project
 cd prisma-starter-kit
 
+# 3. Install npm packages
+yarn
+
 # 3. Start server (runs on http://localhost:4000) and open GraphQL Playground
 yarn dev
 ```
+
+> **Note:** Create new enviroment using example.env and update **`__PRISMA_ENDPOINT__`** if you don't have prisma endpoint run prisma deploy and use Demo Server to get prisma endpoint
 
 > **Note**: We recommend not update graphql-yoga for now, have some [issues](https://github.com/graphcool/graphql-yoga/issues/297)
  leave the stable version graphql-yoga@1.12.1 for now.
