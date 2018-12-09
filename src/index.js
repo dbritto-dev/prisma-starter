@@ -3,8 +3,8 @@ const { Prisma } = require('prisma-binding')
 const resolvers = require('./resolvers')
 
 const server = new GraphQLServer({
-  typeDefs: './src/schema.graphql',
   resolvers,
+  typeDefs: './src/schema.graphql',
   resolverValidationOptions: {
     requireResolversForResolveType: false
   },
